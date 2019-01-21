@@ -97,11 +97,10 @@ El proposito de las dependencias es  construir y ejecutar correctamente el proje
 
 #### Using the terminal execute the command mvn compile. 
 - IMAGEN
-
- ** What is this command using for?**
- Si se quiere compilar las fuentes java,  para eso se ejecuta el comando 
+**What is this command using for?**
+Si se quiere compilar las fuentes java,  para eso se ejecuta el comando 
 *$ mvn compile* en la raiz de nuestro proyecto. 
-	**What are transitive dependencies?**
+**What are transitive dependencies?**
 Son las dependencias de las dependencias que tenemos en el proyecto en construccion.
 
 #### Using the terminal execute the command mvn package
@@ -114,6 +113,6 @@ Son las dependencias de las dependencias que tenemos en el proyecto en construcc
 - IMAGEN
 **What is this command using for?**
 Si ejecuta el *mvn install* comando, los artefactos generados se instalan en el repositorio local de Maven
-* IMAGEN
 
+- IMAGEN
 ---
