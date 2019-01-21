@@ -1,10 +1,15 @@
-# Workshop 1
+# WORKSHOP1
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/CrkJohn/workshop1.svg?style=for-the-badge)
 
-Lenguaje manejado.
+** Lenguaje manejado.**     ![90+%]( https://img.shields.io/github/languages/top/crkJohn/workshop1.svg?style=for-the-badge&colorB=red)
 
-![90+%]( https://img.shields.io/github/languages/top/crkJohn/workshop1.svg?style=for-the-badge&colorB=red)
+###### Integrantes
+- [John David Ibañez](https://github.com/CrkJohn)
+- [Juan Camilo Velandia](https://github.com/jcamilovelandiab)
+------------
+
+
 
 # Git Basic Concepts!
 
@@ -18,7 +23,7 @@ Agrega todos los cambios realizados que se han hecho en el proyecto al actual di
 Es es el mensaje que se le asigna a los cambios hechos del proyecto.
 
 # MAVEN
-- - -
+
 ## Create Maven Project
 
 ### Create a new maven project using the command 
@@ -47,6 +52,10 @@ En la carpeta src se encuentran las carpetas
 src/main/java/edu/eci en la que está el archivo App.java y 
 src/test/java/edu/eci en la que está el archivo AppTest.java
 
+---
+
+## POM file
+
 ### What do means the word SNAPSHOT in the version value?
 
 - Es basicamente una version 1.0 en desarrollo, al estar en desarrollo descargarla hoy daría una archivo diferente al descargarlo mañana o ayer.
@@ -61,7 +70,7 @@ src/test/java/edu/eci en la que está el archivo AppTest.java
         - JAR -  Java archive
         - TAR- tape archives 
 - En maven cuando no se declara el tag en el archivo pom, por defecto maven sabra que es un archivo JAR
--
+
 ### What is the purpose of the dependencies and dependency tags into the POM file?
 
 El proposito de las dependencias es  construir y ejecutar correctamente el projecto en construcción, maven adminitra la lista de dependencias a demas maven descarga y vincula las dependencias de la compilación y incorpora las dependencias de esas dependencias (dependencias transitivas).
@@ -80,3 +89,31 @@ El proposito de las dependencias es  construir y ejecutar correctamente el proje
 ```
 
 [Informacion de las dependencias y de los tags del cuerpo de dependecy](https://maven.apache.org/pom.html#Dependencies)
+- - -
+## Dependency Management
+### What is the functionality of this class?
+- - -
+## Building Lifecycles and Plugins
+
+#### Using the terminal execute the command mvn compile. 
+- IMAGEN
+
+ ** What is this command using for?**
+ Si se quiere compilar las fuentes java,  para eso se ejecuta el comando 
+*$ mvn compile* en la raiz de nuestro proyecto. 
+	**What are transitive dependencies?**
+Son las dependencias de las dependencias que tenemos en el proyecto en construccion.
+
+#### Using the terminal execute the command mvn package
+- IMAGEN
+  **What is this command using for?**
+  Si se quiere crear el ejecutable del packaging file del proyecto se ejecuta 
+  el comando *mvn package* , genera el desplegable del proyecto, si se quieren eliminar artefactos de las compilaciones anteriores se utiliza **clean** es decir *mvn clean package*
+
+####  Using the terminal execute the command mvn install. 
+- IMAGEN
+**What is this command using for?**
+Si ejecuta el *mvn install* comando, los artefactos generados se instalan en el repositorio local de Maven
+* IMAGEN
+
+---
