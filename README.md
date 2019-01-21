@@ -79,4 +79,4 @@ El proposito de las dependencias es  construir y ejecutar correctamente el proje
     </dependencies>
 ```
 
-![Informacion de las dependencias y de los tags del cuerpo de dependecy](https://maven.apache.org/pom.html#Dependencies)
+[Informacion de las dependencias y de los tags del cuerpo de dependecy](https://maven.apache.org/pom.html#Dependencies)
