@@ -7,7 +7,7 @@ Lenguaje manejado.
 ![90+%]( https://img.shields.io/github/languages/top/crkJohn/workshop1.svg?style=for-the-badge&colorB=red)
 
 # Git Basic Concepts!
- - - - 
+
  
 
 ## (Gid add . ) What is the purpose of this command?
