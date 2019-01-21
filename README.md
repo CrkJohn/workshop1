@@ -7,7 +7,8 @@ Lenguaje manejado.
 ![90+%]( https://img.shields.io/github/languages/top/crkJohn/workshop1.svg?style=for-the-badge&colorB=red)
 
 # Git Basic Concepts!
-
+ - - - 
+ 
 
 ## (Gid add . ) What is the purpose of this command?
 
@@ -17,7 +18,7 @@ Agrega todos los cambios realizados que se han hecho en el proyecto al actual di
 Es es el mensaje que se le asigna a los cambios hechos del proyecto.
 
 # MAVEN
-
+- - -
 ## Create Maven Project
 
 ### Create a new maven project using the command 
@@ -45,3 +46,37 @@ Crea una carpeta llamada src y un documento XML pom,
 En la carpeta src se encuentran las carpetas
 src/main/java/edu/eci en la que está el archivo App.java y 
 src/test/java/edu/eci en la que está el archivo AppTest.java
+
+### What do means the word SNAPSHOT in the version value?
+
+- Es basicamente una version 1.0 en desarrollo, al estar en desarrollo descargarla hoy daría una archivo diferente al descargarlo mañana o ayer.
+
+ 
+### What is the purpose of the packing tag into the POM file?
+   
+- El tag  packaging dentro del archivo pom significa la  aparencia del diseño del producto.
+     - Tipos de aparecias:
+        - WAR, web archive
+        - EAR - enterprise archive
+        - JAR -  Java archive
+        - TAR- tape archives 
+- En maven cuando no se declara el tag en el archivo pom, por defecto maven sabra que es un archivo JAR
+-
+### What is the purpose of the dependencies and dependency tags into the POM file?
+
+El proposito de las dependencias es  construir y ejecutar correctamente el projecto en construcción, maven adminitra la lista de dependencias a demas maven descarga y vincula las dependencias de la compilación y incorpora las dependencias de esas dependencias (dependencias transitivas).
+```xml
+<!--- Estructura de una dependencia -->
+   <dependencies>
+        <dependency>
+            <groupId> x </groupId>
+            <artifactId> y </artifactId>
+            <version>4.12</version>
+            <type>jar</type>
+            <scope>test</scope>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+```
+
+![Informacion de las dependencias y de los tags del cuerpo de dependecy](https://maven.apache.org/pom.html#Dependencies)
