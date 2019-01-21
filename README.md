@@ -30,7 +30,12 @@ Es es el mensaje que se le asigna a los cambios hechos del proyecto.
 ```
 mvn archetype:generate -B -DgroupId=edu.eci -DartifactId=file-spy
 ```
-- IMAGEN
+Ejecutamos la línea y en seguida se creará el proyecto maven
+
+![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/batchMode.PNG)
+![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/buildSuccess.PNG)
+
+
 
 ### What do means the -B option in the command?
 --batch-mode, Crea un proyecto de forma no interactiva y también deshabilita la salida de color en el
@@ -73,7 +78,7 @@ src/test/java/edu/eci en la que está el archivo AppTest.java
 
 ### What is the purpose of the dependencies and dependency tags into the POM file?
 
-El proposito de las dependencias es  construir y ejecutar correctamente el projecto en construcción, maven adminitra la lista de dependencias a demas maven descarga y vincula las dependencias de la compilación y incorpora las dependencias de esas dependencias (dependencias transitivas).
+El proposito de las dependencias es  construir y ejecutar correctamente el projecto en construcción, maven adminitra la lista de dependencias a demas maven descarga y vincula las dependencias de la compilación e incorpora las dependencias de esas dependencias (dependencias transitivas).
 ```xml
 <!--- Estructura de una dependencia -->
    <dependencies>
