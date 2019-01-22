@@ -81,15 +81,12 @@ src/main/java y src/test/java, crearán la extensión edu/eci
 
 Crea una carpeta llamada src y un documento XML pom, En la carpeta src se encuentran las carpetas src/main/java/edu/eci en la que está el archivo App.java y  src/test/java/edu/eci en la que está el archivo AppTest.java
 
----
-
 ## POM file
 
 ### What do means the word SNAPSHOT in the version value?
 
-Es básicamente una versión 1.0 en desarrollo, al estar en desarrollo descargarla hoy daría un archivo diferente al descargarlo mañana o ayer.
+Una versión instantánea en Maven que no ha sido lanzada. Es básicamente una versión 1.0 en desarrollo, al estar en desarrollo descargarla hoy daría un archivo diferente al descargarlo ayer o mañana.
 
- 
 ### What is the purpose of the packing tag into the POM file?
    
 - El tag  packaging dentro del archivo pom significa la  aparencia del diseño del producto.
@@ -102,7 +99,7 @@ Es básicamente una versión 1.0 en desarrollo, al estar en desarrollo descargar
 
 ### What is the purpose of the dependencies and dependency tags into the POM file?
 
-El propósito de las dependencias es  construir y ejecutar correctamente el projecto en construcción, maven administra la lista de dependencias a demas maven descarga y vincula las dependencias de la compilación y incorpora las dependencias de esas dependencias (dependencias transitivas).
+El propósito de las dependencias es  construir y ejecutar correctamente el projecto en construcción, maven administra la lista de dependencias además maven descarga y vincula las dependencias de la compilación e incorpora las dependencias de esas dependencias (dependencias transitivas).
 ```xml
 <!--- Estructura de una dependencia -->
    <dependencies>
@@ -134,7 +131,6 @@ El propósito de las dependencias es  construir y ejecutar correctamente el proj
 
 ### What is the functionality of this class?
 
-
 Ésta clase vigila una carpeta en específico, en este caso se está apuntando desde el código a la carpeta "C:\\Users\\DiegoPT\\Downloads\\temp", y muestra un mensaje en consola cuando se crea un archivo tipo .txt .csv.
 
 ## Building Lifecycles and Plugins
@@ -162,9 +158,11 @@ Las fases de vida más comunes dentro del ciclo de vida default son:
 
 ### Using the terminal execute the command mvn compile.
 ![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/mvnCompile.PNG)
+
 **What is this command using for?**
 Si se quiere compilar las fuentes java,  para eso se ejecuta el comando 
-*$ mvn compile* en la raiz de nuestro proyecto. 
+*$ mvn compile* en la raíz de nuestro proyecto. 
+
 **What are transitive dependencies?**
 Son las dependencias de las dependencias que tenemos en el proyecto en construccion.
 
@@ -183,7 +181,7 @@ el comando *mvn package* , genera el desplegable del proyecto, si se quieren eli
 ![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/mvnInstall.PNG)
 
 **What is this command using for?**
-Si ejecuta el *mvn install* comando, los artefactos generados se instalan en el repositorio local de Maven
+Si ejecuta el comando *mvn install*, los artefactos generados se instalan en el repositorio local de Maven.
 
 
 ### Generate a new maven project
@@ -191,6 +189,5 @@ Ejecutamos la siguiente línea de código
 ```
 mvn archetype:generate -B -DgroupId=edu.eci -DartifactId=another-maven-project
 ```
-
 ![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/anotherMavenProject.PNG)
 
