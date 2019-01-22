@@ -174,8 +174,8 @@ Son las dependencias de las dependencias que tenemos en el proyecto en construcc
 ![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/mvnPackage2.PNG)
 
 **What is this command using for?**
-  Si se quiere crear el ejecutable del packaging file del proyecto se ejecuta 
-  el comando *mvn package* , genera el desplegable del proyecto, si se quieren eliminar artefactos de las compilaciones anteriores se utiliza **clean** es decir *mvn clean package*
+Si se quiere crear el ejecutable del packaging file del proyecto se ejecuta 
+el comando *mvn package* , genera el desplegable del proyecto, si se quieren eliminar artefactos de las compilaciones anteriores se utiliza **clean** es decir *mvn clean package*
 
 
 ###  Using the terminal execute the command mvn install. 
