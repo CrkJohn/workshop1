@@ -8,7 +8,7 @@
 - [John David Ibañez](https://github.com/CrkJohn)
 - [Juan Camilo Velandia](https://github.com/jcamilovelandiab)
 ------------
-
+[PARTE DE MAVEN BASIC](https://github.com/CrkJohn/MavenBasic.git)
 
 
 # Git Basic Concepts!
