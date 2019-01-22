@@ -8,7 +8,7 @@
 - [John David Ibañez](https://github.com/CrkJohn)
 - [Juan Camilo Velandia](https://github.com/jcamilovelandiab)
 ------------
-[PARTE DE MAVEN BASIC- WORKSHOP1 - PARTE DOS](https://github.com/CrkJohn/MavenBasic.git)
+
 
 
 # Git Basic Concepts!
@@ -190,4 +190,11 @@ Ejecutamos la siguiente línea de código
 mvn archetype:generate -B -DgroupId=edu.eci -DartifactId=another-maven-project
 ```
 ![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/anotherMavenProject.PNG)
+
+### Use the following command to execute the file-spy application
+```
+mvn exec:java -Dexec.mainClass="edu.eci.FileSpy".
+```
+Pruebas
+![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/pruebas.PNG)
 
