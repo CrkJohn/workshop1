@@ -15,47 +15,71 @@
 
  
 
-## (Gid add . ) What is the purpose of this command?
-
+## What is the purpose of this command?
+```
+Gid add . 
+```
 Agrega todos los cambios realizados que se han hecho en el proyecto al actual directorio.
 
-## (git commit -m "Message".) Why we used it?
+##  Why we used it?
+```
+git commit -m "Message"
+```
 Es es el mensaje que se le asigna a los cambios hechos del proyecto.
 
-# MAVEN
+## Using the push command 
+```
+git push origin master
+```
+El propósito de esta linea es empujar(push) los cambios realizados en el proyecto o repositorio, al origen del servidor remoto, en la rama principal (master branch).
 
+## Cloning our repository
+```
+git clone <repository>
+```
+Éste comando es utilizado para apuntar hacia un repositorio existente y crear un clon o una copia del repositorio destino.
+
+## Using pull command
+```
+git pull origin master
+```
+
+El comando extrae los cambios que se han hecho al repositorio remoto de origen,
+y los mezcla con la rama local, actualizando el repositorio local.
+
+---
+
+# MAVEN
 ## Create Maven Project
 
 ### Create a new maven project using the command 
 ```
 mvn archetype:generate -B -DgroupId=edu.eci -DartifactId=file-spy
 ```
-Ejecutamos la línea y en seguida se creará el proyecto maven
+
+Ejecutamos la linea y en seguida se creará el proyecto maven.
 
 ![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/batchMode.PNG)
 ![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/buildSuccess.PNG)
 
 
-
 ### What do means the -B option in the command?
---batch-mode, Crea un proyecto de forma no interactiva y también deshabilita la salida de color en el
-momento de la instalación
-https://stackoverflow.com/questions/25896081/what-is-the-diffrence-between-interactive-and-batch-mode-in-maven
+
+batch-mode (modo por lotes), Crea un proyecto de forma no interactiva, es decir utilizará automáticamente los valores predeterminados que están en la configuración de maven, también deshabilita la salida de color en el momento de la instalación.
+
 
 ### What do means the -D option in the command?
 Define una propiedad del sistema, en este caso define el groupId
 
 ### What do means the groupId, artifactId properties in the command?
-GroupId es un identificador único universal para un proyecto, éste suele ser solo el nombre del proyecto
+
+GroupId es un identificador único universal para un proyecto, éste suele ser solo el nombre del proyecto.
 ArtifactId son las carpetas que se van a crear, ejemplo edu.eci, dentro de las carpetas predefinidas
 src/main/java y src/test/java, crearán la extensión edu/eci
 
 ### Describe the content of the directory that has been created.
 
-Crea una carpeta llamada src y un documento XML pom,
-En la carpeta src se encuentran las carpetas
-src/main/java/edu/eci en la que está el archivo App.java y 
-src/test/java/edu/eci en la que está el archivo AppTest.java
+Crea una carpeta llamada src y un documento XML pom, En la carpeta src se encuentran las carpetas src/main/java/edu/eci en la que está el archivo App.java y  src/test/java/edu/eci en la que está el archivo AppTest.java
 
 ---
 
@@ -63,7 +87,7 @@ src/test/java/edu/eci en la que está el archivo AppTest.java
 
 ### What do means the word SNAPSHOT in the version value?
 
-- Es basicamente una version 1.0 en desarrollo, al estar en desarrollo descargarla hoy daría una archivo diferente al descargarlo mañana o ayer.
+Es básicamente una versión 1.0 en desarrollo, al estar en desarrollo descargarla hoy daría un archivo diferente al descargarlo mañana o ayer.
 
  
 ### What is the purpose of the packing tag into the POM file?
@@ -74,11 +98,11 @@ src/test/java/edu/eci en la que está el archivo AppTest.java
         - EAR - enterprise archive
         - JAR -  Java archive
         - TAR- tape archives 
-- En maven cuando no se declara el tag en el archivo pom, por defecto maven sabra que es un archivo JAR
+- En maven cuando no se declara el tag en el archivo pom, por defecto maven sabrá que es un archivo JAR
 
 ### What is the purpose of the dependencies and dependency tags into the POM file?
 
-El proposito de las dependencias es  construir y ejecutar correctamente el projecto en construcción, maven adminitra la lista de dependencias a demas maven descarga y vincula las dependencias de la compilación e incorpora las dependencias de esas dependencias (dependencias transitivas).
+El propósito de las dependencias es  construir y ejecutar correctamente el projecto en construcción, maven administra la lista de dependencias a demas maven descarga y vincula las dependencias de la compilación y incorpora las dependencias de esas dependencias (dependencias transitivas).
 ```xml
 <!--- Estructura de una dependencia -->
    <dependencies>
@@ -94,14 +118,50 @@ El proposito de las dependencias es  construir y ejecutar correctamente el proje
 ```
 
 [Informacion de las dependencias y de los tags del cuerpo de dependecy](https://maven.apache.org/pom.html#Dependencies)
-- - -
+
 ## Dependency Management
+
+### Go to the MVNRepository and search fortika-core library. Add a new dependency to the POM file with the last version of this library.
+
+```xml
+<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
+<dependency>
+    <groupId>org.apache.tika</groupId>
+    <artifactId>tika-core</artifactId>
+    <version>1.20</version>
+</dependency>
+```
+
 ### What is the functionality of this class?
-- - -
+
+
+Ésta clase vigila una carpeta en específico, en este caso se está apuntando desde el código a la carpeta "C:\\Users\\DiegoPT\\Downloads\\temp", y muestra un mensaje en consola cuando se crea un archivo tipo .txt .csv.
+
 ## Building Lifecycles and Plugins
 
-#### Using the terminal execute the command mvn compile. 
-- IMAGEN
+
+## The three principal Maven lifecycles areclean, default and site. Describe each one.
+
+- Clean, limpia los archivos y directorios generados por la construcción de un proyecto maven
+- Default, este ciclo de vida genera, compila, empaqueta, etc, el código fuente, no se puede ejecutar el ciclo de vida default directamente, como lo es con Clean y Site, en su lugar ejecuta una fase de vida específica.
+Las fases de vida más comunes dentro del ciclo de vida default son:
+   
+    - Validate, valida que el proyecto está correcto y que toda la información necesaria está disponible, esto también asegura que las dependendecias hayan sido descargadas.
+    
+    - Compile, compila el codigo fuente del proyecto
+    
+    - Test, corre todas las pruebas sobre el código fuente.
+    
+    - Package, Empaqueta todo el código en un formato distribuible como el JAR.
+     
+    - Install, Instala el paquete en un repositorio local para que otros repositorios locales pueden usar la dependencia
+    
+    - Deploy, copia el paquete final en el repositorio remoto para compartirlo con otros desarrolladores y proyectos.
+
+- Site, éste comando permite compilar el código hasta cierto ciclo de vida.
+
+#### Using the terminal execute the command mvn compile.
+![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/mvnCompile.PNG)
 **What is this command using for?**
 Si se quiere compilar las fuentes java,  para eso se ejecuta el comando 
 *$ mvn compile* en la raiz de nuestro proyecto. 
