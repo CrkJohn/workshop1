@@ -9,6 +9,8 @@
 - [Juan Camilo Velandia](https://github.com/jcamilovelandiab)
 ------------
 
+[CODIGO PARTE DE MAVEN BASIC- WORKSHOP1 - PARTE DOS](https://github.com/CrkJohn/MavenBasic.git)
+###### TASK DEL MAVEN, encuentran en este mismo md
 
 
 # Git Basic Concepts!
