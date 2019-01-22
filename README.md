@@ -140,7 +140,7 @@ El propósito de las dependencias es  construir y ejecutar correctamente el proj
 ## Building Lifecycles and Plugins
 
 
-## The three principal Maven lifecycles areclean, default and site. Describe each one.
+### The three principal Maven lifecycles areclean, default and site. Describe each one.
 
 - Clean, limpia los archivos y directorios generados por la construcción de un proyecto maven
 - Default, este ciclo de vida genera, compila, empaqueta, etc, el código fuente, no se puede ejecutar el ciclo de vida default directamente, como lo es con Clean y Site, en su lugar ejecuta una fase de vida específica.
@@ -160,7 +160,7 @@ Las fases de vida más comunes dentro del ciclo de vida default son:
 
 - Site, éste comando permite compilar el código hasta cierto ciclo de vida.
 
-#### Using the terminal execute the command mvn compile.
+### Using the terminal execute the command mvn compile.
 ![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/mvnCompile.PNG)
 **What is this command using for?**
 Si se quiere compilar las fuentes java,  para eso se ejecuta el comando 
@@ -168,16 +168,29 @@ Si se quiere compilar las fuentes java,  para eso se ejecuta el comando
 **What are transitive dependencies?**
 Son las dependencias de las dependencias que tenemos en el proyecto en construccion.
 
-#### Using the terminal execute the command mvn package
-- IMAGEN
-  **What is this command using for?**
+### Using the terminal execute the command mvn package
+
+![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/mvnPackage1.PNG)
+![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/mvnPackage2.PNG)
+
+**What is this command using for?**
   Si se quiere crear el ejecutable del packaging file del proyecto se ejecuta 
   el comando *mvn package* , genera el desplegable del proyecto, si se quieren eliminar artefactos de las compilaciones anteriores se utiliza **clean** es decir *mvn clean package*
 
-####  Using the terminal execute the command mvn install. 
-- IMAGEN
+
+###  Using the terminal execute the command mvn install. 
+
+![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/mvnInstall.PNG)
+
 **What is this command using for?**
 Si ejecuta el *mvn install* comando, los artefactos generados se instalan en el repositorio local de Maven
 
-- IMAGEN
----
+
+### Generate a new maven project
+Ejecutamos la siguiente línea de código
+```
+mvn archetype:generate -B -DgroupId=edu.eci -DartifactId=another-maven-project
+```
+
+![](https://github.com/CrkJohn/workshop1/blob/master/imagenes/anotherMavenProject.PNG)
+
